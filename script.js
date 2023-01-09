@@ -1,135 +1,63 @@
-let button1 = document.getElementById('b1');
-let button2 = document.getElementById('b2');
-let button3 = document.getElementById('b3');
-let button4 = document.getElementById('b4');
-let button5 = document.getElementById('b5');
-let button6 = document.getElementById('b6');
-let button7 = document.getElementById('b7');
-let button8 = document.getElementById('b8');
-let button9 = document.getElementById('b9');
-let button0 = document.getElementById('b0');
-let button10 = document.getElementById('b10');
-let button11 = document.getElementById('b11');
-let button12 = document.getElementById('b12');
-let button13 = document.getElementById('b13');
-let button14 = document.getElementById('b14');
-let buttonac = document.getElementById('bac');
-let buttonc = document.getElementById('bc');
+// let k1 = document.getElementById('lol1').textContent;
+// let k2 = document.getElementById('lol2');
 
-let display = document.getElementById('p');
+// function lol () {
+// k2.innerHTML = k1;
+// }
+let hum = document.getElementById('hum')
+let hum1 = document.getElementById('hum1')
+let humtxt1 = document.getElementById('hum2')
+let img = document.getElementById('img1');
+let imgArr = ['photo/1.png','photo/2.jpeg','photo/3.jpeg']
+let button1 = document.getElementById('button2')
+let button2 = document.getElementById('button1')
+
+//event lisener
+button1.addEventListener('click', func1)
+button2.addEventListener('click', func2)
+hum.addEventListener('click', func3)
+
+
+// // counter
 let cn = 0;
-let num1 = 0;
-let num2 = 0;
-let num3;
-let sumboll;
+let cn1 = 1;
 
-button1.addEventListener('click', func1);
-button2.addEventListener('click', func2);
-button3.addEventListener('click', func3);
-button4.addEventListener('click', func4);
-button5.addEventListener('click', func5);
-button6.addEventListener('click', func6);
-button7.addEventListener('click', func7);
-button8.addEventListener('click', func8);
-button9.addEventListener('click', func9);
-button0.addEventListener('click', func0);
-button10.addEventListener('click', func10);
-button11.addEventListener('click', func11);
-button12.addEventListener('click', func12);
-button13.addEventListener('click', func13);
-button14.addEventListener('click', func14);
-buttonac.addEventListener('click', funcAC);
-buttonc.addEventListener('click', funcC);
+//setInterval
+// setInterval(func11(), 5000);
+
+//function
+// function func11(){
+//     if(cn == imgArr.length - 1){
+//         cn = -1;
+//     }
+//     img.src = imgArr[cn + 1];
+//     cn++
+//     console.log(cn)
+// }
 function func1(){
-display.textContent += 1;
+    if(cn == imgArr.length - 1){
+        cn = -1;
+    }
+    img.src = imgArr[cn + 1];
+    cn++
+    console.log(cn)
 }
 function func2(){
-display.textContent += 2;
+    if(cn == imgArr.length - 1){
+        cn = -1;
+    }
+    img.src = imgArr[cn + 1];
+    cn++
+    console.log(cn)
 }
 function func3(){
-display.textContent += 3;
-}
-function func4(){
-display.textContent += 4;
-}
-function func5(){
-display.textContent += 5;
-}
-function func6(){
-display.textContent += 6;
-}
-function func7(){
-display.textContent += 7;
-}function func8(){
-display.textContent += 8;
-}
-function func9(){
-display.textContent += 9;
-}
-function func0(){
-display.textContent += 0;
-}
-function func10(){
-if(display.textContent.length == 0){
-display.textContent = 'Eror';
-}else{
-num1 = display.textContent;
-display.textContent += '+';
-sumboll = 0;
-}
-}
-function func12(){
-if(display.textContent.length == 0){
-display.textContent = 'Eror';
-}else{
-num1 = display.textContent;
-display.textContent += '-';
-sumboll = 1;
-}
-}
-function func13(){
-    if(display.textContent.length == 0){
-    display.textContent = 'Eror';
-    }else{
-    num1 = display.textContent;
-    display.textContent += '/';
-    sumboll = 2;
-    }
-    }
-    function func14(){
-        if(display.textContent.length == 0){
-        display.textContent = 'Eror';
-        }else{
-        num1 = display.textContent;
-        display.textContent += '*';
-        sumboll = 3;
-        }
-        }
-function func11(){
-if(sumboll == 0){
-num2 = display.textContent.replace('+', '').replace(num1, '');
-num3 = Number(num1) + Number(num2)
-display.textContent = num3;
-} else if(sumboll == 1){
-num2 = display.textContent.replace('-', '').replace(num1, '');
-num3 = Number(num1) - Number(num2)
-display.textContent = num3;
-}else if(sumboll == 2){
-    num2 = display.textContent.replace('/', '').replace(num1, '');
-    num3 = Number(num1) / Number(num2)
-    display.textContent = num3;
-    }else if(sumboll == 3){
-        num2 = display.textContent.replace('*', '').replace(num1, '');
-        num3 = Number(num1) * Number(num2)
-        display.textContent = num3;
-        }
-}
-function funcAC(){
-display.textContent = ' ';
-}
-function funcC(){
-for(let i = display.textContent.length; i <= 0;i++){
-display.textContent.replace(display.textContent[i], '')
-console.log(i)
+if(cn1 == 0){
+hum1.style.display = 'none';
+hum.style.left = '95%';
+cn1 = 1
+} else{
+hum1.style.display = 'block';
+hum.style.left = '85%';
+cn1 = 0
 }
 }
