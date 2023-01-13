@@ -5,10 +5,12 @@
 // k2.innerHTML = k1;
 // }
 let hum = document.getElementById('hum')
+let a1 = document.getElementById('a1')
+let a2 = document.getElementById('a2')
 let hum1 = document.getElementById('hum1')
 let humtxt1 = document.getElementById('hum2')
 let img = document.getElementById('img1');
-let imgArr = ['photo/1.png','photo/2.jpeg','photo/3.jpeg']
+let imgArr = ['photo/1.png','photo/2.jpeg']
 let button1 = document.getElementById('button2')
 let button2 = document.getElementById('button1')
 
